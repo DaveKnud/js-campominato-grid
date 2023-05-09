@@ -9,24 +9,30 @@ console.log("Button");
 //create click button
 button.addEventListener("click",
     function() {
-       button.innerHTML = `Let's go`;
+       button.classList.add("inactive");
        
        for (let i = 0; i < 100; i++){
-        const newSquare =  createSquare();
-        container.append(newSquare);
+        const square = createNewSquare ("div","square");
+        container.append(square);
         }
 
-    
+        newSquare.addEventListener("click",
+            function(){
+                newSquare.classList.add("blue-square");
+            }
+        )
+
+
     }
 )
 
 
 
 //FUNZIONI
-function createSquare() {
-    const square = document.createElement("div");
-    square.classList.add("square");
-    return square;
+function createNewSquare(tagToAdd , classToAdd) {
+    const newSquare = document.createElement(tagToAdd);
+    newSquare.classList.add(classToAdd);
+    return newSquare;
 }
 
 
