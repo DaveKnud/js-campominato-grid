@@ -16,19 +16,13 @@ button.addEventListener("click",
         const newSquare = createNewCol ("div","square");
         container.append(newSquare);
         }
-    }
+
+        newSquare.addEventListener("click",
+        function(){
+        newSquare.classList.add("blue-square");
+        }
+)   }
 )
-
-//const new Square
-const newSquare = createNewCol ("div","square");
-
-newSquare.addEventListener("click",
-function(){
-    newSquare.classList.add("blue-square");
-    }
-)
-
-
 
 //FUNZIONI
 
